@@ -1,0 +1,26 @@
+BI Procedure,Start Date Time,Status,Description,End Date Time,Duration in Seconds,Rows Count
+a_drop_views.py,2021-12-15 18:04:25.138660,Pass,Successful Run,2021-12-15 18:04:28.107628,2.968968,0
+d_agency.py,2021-12-15 18:04:28.108631,Pass,Successful Run,2021-12-15 18:04:29.025618,0.916987,91
+d_customer.py,2021-12-15 18:04:29.026619,Pass,Successful Run,2021-12-15 18:04:34.136566,5.109947,1322813
+d_naics.py,2021-12-15 18:04:34.137568,Pass,Successful Run,2021-12-15 18:04:44.325466,10.187898,1276
+d_psc.py,2021-12-15 18:04:44.326466,Pass,Successful Run,2021-12-15 18:04:57.126326,12.79986,3122
+d_region.py,2021-12-15 18:04:57.127330,Pass,Successful Run,2021-12-15 18:04:58.294319,1.166989,11
+f_advantage.py,2021-12-15 18:04:58.295320,Pass,Successful Run,2021-12-15 18:05:01.129284,2.833964,3020615
+f_budget_authority.py,2021-12-15 18:05:01.130284,Pass,Successful Run,2021-12-15 18:05:03.780251,2.649967,199550
+f_budget_outlays.py,2021-12-15 18:05:03.781254,Pass,Successful Run,2021-12-15 18:05:05.672229,1.890975,205250
+f_budget_receipts.py,2021-12-15 18:05:05.673229,Pass,Successful Run,2021-12-15 18:05:07.485211,1.811982,12600
+f_campaign.py,2021-12-15 18:05:07.486212,Pass,Successful Run,2021-12-15 18:05:17.944104,10.457892,26840365
+f_case.py,2021-12-15 18:05:17.945107,Pass,Successful Run,2021-12-15 18:05:21.016073,3.070966,2004299
+f_ebuy.py,2021-12-15 18:05:21.017074,Pass,Successful Run,2021-12-15 18:05:22.843052,1.825978,112567
+f_eloqua_emailclick.py,2021-12-15 18:05:22.843052,Pass,Successful Run,2021-12-15 18:05:24.382048,1.538996,246287
+f_eloqua_emailopen.py,2021-12-15 18:05:24.383031,Pass,Successful Run,2021-12-15 18:05:27.276012,2.892981,4718139
+f_eloqua_emailsend.py,2021-12-15 18:05:27.277012,Pass,Successful Run,2021-12-15 18:05:34.624927,7.347915,17446778
+f_eloqua_pageview.py,2021-12-15 18:05:34.625929,Pass,Successful Run,2021-12-15 18:05:37.965899,3.33997,3179815
+f_eloqua_webvisit.py,2021-12-15 18:05:37.966899,Pass,Successful Run,2021-12-15 18:05:40.122878,2.155979,1078383
+f_opportunity.py,2021-12-15 18:05:40.123880,Pass,Successful Run,2021-12-15 18:05:41.311868,1.187988,39609
+f_survey.py,2021-12-15 18:05:41.311868,Pass,Successful Run,2021-12-15 18:05:43.814836,2.502968,1283413
+s_fpds_obligations.py,2021-12-15 18:05:43.815839,Pass,Successful Run,2021-12-15 18:06:10.440551,26.624712,7029885
+v_agency.py,2021-12-15 18:04:25,Fail,"column ""issue_date_key"" does not exist in f_ebuy
+",2021-12-15 18:04:25,0,0
+v_customer.py,2021-12-15 18:04:25,Fail,"column ""issue_date_key"" does not exist in f_ebuy
+",2021-12-15 18:04:25,0,0

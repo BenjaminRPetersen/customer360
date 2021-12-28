@@ -1,0 +1,23 @@
+Integration File,Start Date Time,Status,Description,End Date Time,Duration in Seconds,Rows Updated,Rows Created
+eloqua_accounts.py,2021-11-04 12:23:32.618904,Pass,Successful Run,2021-11-04 12:23:39.366776,6.747872,9,21
+eloqua_bounceback.py,2021-11-04 12:23:39.382778,Pass,Successful Run,2021-11-04 12:23:48.264566,8.881788,0,530
+eloqua_contacts.py,2021-11-04 12:23:48.267567,Pass,Successful Run,2021-11-04 12:24:00.116853,11.849286,1996,375
+eloqua_emailclickthrough.py,2021-11-04 12:24:00.137853,Pass,Successful Run,2021-11-04 12:24:10.363564,10.225711,502,1694
+eloqua_emailopen.py,2021-11-04 12:24:10.377566,Pass,Successful Run,2021-11-04 12:25:14.120713,63.743147,12389,36389
+eloqua_emailsend.py,2021-11-04 12:25:14.141714,Pass,Successful Run,2021-11-04 12:29:16.119710,241.977996,52275,185918
+eloqua_formsubmit.py,2021-11-04 12:29:16.134710,Pass,Successful Run,2021-11-04 12:29:30.587308,14.452598,397,795
+eloqua_pageview.py,2021-11-04 12:29:30.601271,Pass,Successful Run,2021-11-04 12:29:52.298668,21.697397,2554,8124
+eloqua_subscribe.py,2021-11-04 12:29:52.310675,Pass,Successful Run,2021-11-04 12:29:58.116491,5.805816,120,335
+eloqua_unsubscribe.py,2021-11-04 12:29:58.128492,Pass,Successful Run,2021-11-04 12:30:03.712316,5.583824,120,335
+eloqua_webvisit.py,2021-11-04 12:30:03.728317,Pass,Successful Run,2021-11-04 12:30:14.743004,11.014687,973,3402
+salesforce_account.py,2021-11-04 12:23:31,Fail,"{'message': 'Your password has expired. Please reset your password.', 'errorCode': 'INVALID_OPERATION_WITH_EXPIRED_PASSWORD'}",2021-11-04 12:23:31,0,0,0
+salesforce_campaign.py,2021-11-04 12:23:31,Fail,"{'message': 'Your password has expired. Please reset your password.', 'errorCode': 'INVALID_OPERATION_WITH_EXPIRED_PASSWORD'}",2021-11-04 12:23:31,0,0,0
+salesforce_campaignmember.py,2021-11-04 12:23:31,Fail,"{'message': 'Your password has expired. Please reset your password.', 'errorCode': 'INVALID_OPERATION_WITH_EXPIRED_PASSWORD'}",2021-11-04 12:23:31,0,0,0
+salesforce_case.py,2021-11-04 12:23:31,Fail,"{'message': 'Your password has expired. Please reset your password.', 'errorCode': 'INVALID_OPERATION_WITH_EXPIRED_PASSWORD'}",2021-11-04 12:23:31,0,0,0
+salesforce_contact.py,2021-11-04 12:23:31,Fail,"{'message': 'Your password has expired. Please reset your password.', 'errorCode': 'INVALID_OPERATION_WITH_EXPIRED_PASSWORD'}",2021-11-04 12:23:31,0,0,0
+salesforce_event.py,2021-11-04 12:23:31,Fail,"{'message': 'Your password has expired. Please reset your password.', 'errorCode': 'INVALID_OPERATION_WITH_EXPIRED_PASSWORD'}",2021-11-04 12:23:31,0,0,0
+salesforce_lead.py,2021-11-04 12:23:31,Fail,"{'message': 'Your password has expired. Please reset your password.', 'errorCode': 'INVALID_OPERATION_WITH_EXPIRED_PASSWORD'}",2021-11-04 12:23:31,0,0,0
+salesforce_opportunity.py,2021-11-04 12:23:31,Fail,"{'message': 'Your password has expired. Please reset your password.', 'errorCode': 'INVALID_OPERATION_WITH_EXPIRED_PASSWORD'}",2021-11-04 12:23:31,0,0,0
+salesforce_recordtype.py,2021-11-04 12:23:31,Fail,"{'message': 'Your password has expired. Please reset your password.', 'errorCode': 'INVALID_OPERATION_WITH_EXPIRED_PASSWORD'}",2021-11-04 12:23:31,0,0,0
+salesforce_task.py,2021-11-04 12:23:31,Fail,"{'message': 'Your password has expired. Please reset your password.', 'errorCode': 'INVALID_OPERATION_WITH_EXPIRED_PASSWORD'}",2021-11-04 12:23:31,0,0,0
+salesforce_user.py,2021-11-04 12:23:31,Fail,"{'message': 'Your password has expired. Please reset your password.', 'errorCode': 'INVALID_OPERATION_WITH_EXPIRED_PASSWORD'}",2021-11-04 12:23:31,0,0,0

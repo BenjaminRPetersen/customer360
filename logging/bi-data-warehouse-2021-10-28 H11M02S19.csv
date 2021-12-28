@@ -1,0 +1,20 @@
+BI Procedure,Start Date Time,Status,Description,End Date Time,Duration in Seconds,Rows Count
+d_agency.py,2021-10-28 11:02:19.975822,Pass,Successful Run,2021-10-28 11:02:20.193822,0.218,91
+d_customer.py,2021-10-28 11:02:19,Fail,'psycopg2.extensions.cursor' object has no attribute 'commit',2021-10-28 11:02:19,0,0
+d_naics.py,2021-10-28 11:02:23.474696,Pass,Successful Run,2021-10-28 11:02:34.539381,11.064685,1276
+d_psc.py,2021-10-28 11:02:34.549385,Pass,Successful Run,2021-10-28 11:02:46.104076,11.554691,3122
+f_advantage.py,2021-10-28 11:02:46.115079,Pass,Successful Run,2021-10-28 11:02:46.970045,0.854966,3147301
+f_budget_authority.py,2021-10-28 11:02:46.980049,Pass,Successful Run,2021-10-28 11:02:47.401052,0.421003,199550
+f_budget_outlays.py,2021-10-28 11:02:47.413055,Pass,Successful Run,2021-10-28 11:02:47.759013,0.345958,205250
+f_budget_receipts.py,2021-10-28 11:02:47.767015,Pass,Successful Run,2021-10-28 11:02:47.979016,0.212001,12600
+f_campaign.py,2021-10-28 11:02:47.988018,Pass,Successful Run,2021-10-28 11:02:54.449852,6.461834,26418090
+f_case.py,2021-10-28 11:02:54.457860,Pass,Successful Run,2021-10-28 11:02:55.736783,1.278923,2013814
+f_ebuy.py,2021-10-28 11:02:55.744792,Pass,Successful Run,2021-10-28 11:02:56.019787,0.274995,85502
+f_eloqua_emailclick.py,2021-10-28 11:02:56.028790,Pass,Successful Run,2021-10-28 11:02:56.546752,0.517962,235431
+f_eloqua_emailopen.py,2021-10-28 11:02:56.556760,Pass,Successful Run,2021-10-28 11:02:58.102729,1.545969,4373667
+f_eloqua_emailsend.py,2021-10-28 11:02:58.110737,Pass,Successful Run,2021-10-28 11:03:02.076192,3.965455,16304015
+f_eloqua_pageview.py,2021-10-28 11:03:02.088192,Pass,Successful Run,2021-10-28 11:03:03.895128,1.806936,3108459
+f_eloqua_webvisit.py,2021-10-28 11:03:03.904129,Pass,Successful Run,2021-10-28 11:03:04.721094,0.816965,1051642
+f_opportunity.py,2021-10-28 11:03:04.731102,Pass,Successful Run,2021-10-28 11:03:05.037099,0.305997,37804
+f_survey.py,2021-10-28 11:03:05.045101,Pass,Successful Run,2021-10-28 11:03:05.909074,0.863973,1285531
+s_fpds_obligations.py,2021-10-28 11:03:05.922072,Pass,Successful Run,2021-10-28 11:03:33.385306,27.463234,6888137

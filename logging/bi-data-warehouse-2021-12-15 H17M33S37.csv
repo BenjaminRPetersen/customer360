@@ -1,0 +1,30 @@
+BI Procedure,Start Date Time,Status,Description,End Date Time,Duration in Seconds,Rows Count
+a_drop_views.py,2021-12-15 17:33:37.120835,Pass,Successful Run,2021-12-15 17:33:37.312787,0.191952,0
+d_agency.py,2021-12-15 17:33:37.312787,Pass,Successful Run,2021-12-15 17:33:37.434818,0.122031,91
+d_customer.py,2021-12-15 17:33:37,Fail,'psycopg2.extensions.cursor' object has no attribute 'commit',2021-12-15 17:33:37,0,0
+d_naics.py,2021-12-15 17:33:41.962777,Pass,Successful Run,2021-12-15 17:33:51.324664,9.361887,1276
+d_psc.py,2021-12-15 17:33:51.324664,Pass,Successful Run,2021-12-15 17:34:02.905312,11.580648,3122
+d_region.py,2021-12-15 17:34:02.905312,Pass,Successful Run,2021-12-15 17:34:03.010316,0.105004,11
+f_advantage.py,2021-12-15 17:34:03.011314,Pass,Successful Run,2021-12-15 17:34:05.199291,2.187977,3020615
+f_budget_authority.py,2021-12-15 17:34:05.200293,Pass,Successful Run,2021-12-15 17:34:06.046278,0.845985,199550
+f_budget_outlays.py,2021-12-15 17:34:06.047280,Pass,Successful Run,2021-12-15 17:34:06.880265,0.832985,205250
+f_budget_receipts.py,2021-12-15 17:34:06.881266,Pass,Successful Run,2021-12-15 17:34:07.057267,0.176001,12600
+f_campaign.py,2021-12-15 17:34:07.058268,Pass,Successful Run,2021-12-15 17:34:15.860170,8.801902,26840365
+f_case.py,2021-12-15 17:34:15.862170,Pass,Successful Run,2021-12-15 17:34:18.491136,2.628966,2004299
+f_ebuy.py,2021-12-15 17:34:18.492136,Pass,Successful Run,2021-12-15 17:34:19.395126,0.90299,112567
+f_eloqua_emailclick.py,2021-12-15 17:34:19.396125,Pass,Successful Run,2021-12-15 17:34:20.281110,0.884985,246287
+f_eloqua_emailopen.py,2021-12-15 17:34:20.282113,Pass,Successful Run,2021-12-15 17:34:22.478089,2.195976,4718139
+f_eloqua_emailsend.py,2021-12-15 17:34:22.479090,Pass,Successful Run,2021-12-15 17:34:27.469040,4.98995,17446778
+f_eloqua_pageview.py,2021-12-15 17:33:37,Fail,"column name ""region"" is duplicated
+CONTEXT:  SQL statement ""SELECT  id AS pageview_key, url AS url, referrerurl AS referrer_url, customer.customer_key, customer.agency_key::integer, customer.region::integer, customer.region::integer, DATE_PART(epoch, CAST(activitydate AS DATE)) :: INTEGER AS activity_date_key INTO  customer360.f_eloqua_pageview FROM customer360.s_eloqua_pageview web_visit join customer360.s_eloqua_contacts contacts ON RIGHT(contacts.contactidext, 12) :: INTEGER = web_visit.contactid join customer360.d_customer customer ON contacts.c_emailaddress = customer.customer_key""
+PL/pgSQL function ""f_eloqua_pageview"" line 13 at SQL statement
+",2021-12-15 17:33:37,0,0
+f_eloqua_webvisit.py,2021-12-15 17:34:27.531041,Pass,Successful Run,2021-12-15 17:34:28.945029,1.413988,1078383
+f_opportunity.py,2021-12-15 17:34:28.946030,Pass,Successful Run,2021-12-15 17:34:29.579015,0.632985,39609
+f_survey.py,2021-12-15 17:34:29.579015,Pass,Successful Run,2021-12-15 17:34:31.559969,1.980954,1283413
+s_fpds_obligations.py,2021-12-15 17:34:31.560994,Pass,Successful Run,2021-12-15 17:34:55.871681,24.310687,7029885
+v_agency.py,2021-12-15 17:33:37,Fail,"(psycopg2.errors.UndefinedTable) relation ""customer360.v_agency"" does not exist
+
+[SQL: select count(*) ct from customer360.v_agency]
+(Background on this error at: http://sqlalche.me/e/f405)",2021-12-15 17:33:37,0,0
+v_customer.py,2021-12-15 17:35:02.028573,Pass,Successful Run,2021-12-15 17:35:39.227963,37.19939,18374232

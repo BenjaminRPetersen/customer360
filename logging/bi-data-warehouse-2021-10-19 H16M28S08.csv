@@ -1,0 +1,32 @@
+BI Procedure,Start Date Time,Status,Description,End Date Time,Duration in Seconds,Rows Count
+d_agency.py,2021-10-19 16:28:08.021988,Pass,Successful Run,2021-10-19 16:28:08.252077,0.230089,91
+d_customer.py,2021-10-19 16:28:08.254080,Pass,Successful Run,2021-10-19 16:28:11.617998,3.363918,1410962
+d_naics.py,2021-10-19 16:28:11.620001,Pass,Successful Run,2021-10-19 16:28:11.900960,0.280959,1276
+d_psc.py,2021-10-19 16:28:08,Fail,"(psycopg2.errors.InsufficientPrivilege) permission denied for schema cart
+CONTEXT:  SQL statement ""update customer360.d_psc set in_scope_1 = isnull(b.psc_in_scope, 'F') from customer360.d_psc a, cart.fpdsxi_psc_lookup b where (a.psc_key = b.psc_code)""
+PL/pgSQL function ""d_psc"" line 501 at SQL statement
+
+[SQL: call customer360.d_psc();]
+(Background on this error at: http://sqlalche.me/e/f405)",2021-10-19 16:28:08,0,0
+f_advantage.py,2021-10-19 16:28:20.084146,Pass,Successful Run,2021-10-19 16:28:30.099480,10.015334,3129636
+f_budget_authority.py,2021-10-19 16:28:30.099480,Pass,Successful Run,2021-10-19 16:28:37.521165,7.421685,199550
+f_budget_outlays.py,2021-10-19 16:28:37.521165,Pass,Successful Run,2021-10-19 16:28:38.068007,0.546842,205250
+f_budget_receipts.py,2021-10-19 16:28:38.068007,Pass,Successful Run,2021-10-19 16:28:44.630344,6.562337,12600
+f_campaign.py,2021-10-19 16:28:44.630344,Pass,Successful Run,2021-10-19 16:29:02.770430,18.140086,25907029
+f_case.py,2021-10-19 16:29:02.770430,Pass,Successful Run,2021-10-19 16:29:10.004586,7.234156,1973579
+f_ebuy.py,2021-10-19 16:29:10.004586,Pass,Successful Run,2021-10-19 16:29:20.207423,10.202837,85303
+f_eloqua_emailclick.py,2021-10-19 16:29:20.207423,Pass,Successful Run,2021-10-19 16:29:29.738422,9.530999,228759
+f_eloqua_emailopen.py,2021-10-19 16:29:29.738422,Pass,Successful Run,2021-10-19 16:29:34.503901,4.765479,4124993
+f_eloqua_emailsend.py,2021-10-19 16:29:34.503901,Pass,Successful Run,2021-10-19 16:29:41.894328,7.390427,15610749
+f_eloqua_pageview.py,2021-10-19 16:29:41.894328,Pass,Successful Run,2021-10-19 16:29:43.794446,1.900118,3066572
+f_eloqua_webvisit.py,2021-10-19 16:29:43.794446,Pass,Successful Run,2021-10-19 16:29:52.628381,8.833935,1028189
+f_opportunity.py,2021-10-19 16:29:52.628381,Pass,Successful Run,2021-10-19 16:30:05.331133,12.702752,36784
+f_survey.py,2021-10-19 16:30:05.331133,Pass,Successful Run,2021-10-19 16:30:06.596732,1.265599,1283413
+s_fpds_obligations.py,2021-10-19 16:28:08,Fail,"(psycopg2.errors.InsufficientPrivilege) permission denied for schema cart
+CONTEXT:  SQL statement ""update customer360.d_psc set in_scope_1 = isnull(b.psc_in_scope, 'F') from customer360.d_psc a, cart.fpdsxi_psc_lookup b where (a.psc_key = b.psc_code)""
+PL/pgSQL function ""d_psc"" line 501 at SQL statement
+SQL statement ""CALL  customer360.d_psc()""
+PL/pgSQL function ""s_fpds_obligations"" line 67 at call
+
+[SQL: call customer360.s_fpds_obligations();]
+(Background on this error at: http://sqlalche.me/e/f405)",2021-10-19 16:28:08,0,0

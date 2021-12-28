@@ -1,0 +1,26 @@
+BI Procedure,Start Date Time,Status,Description,End Date Time,Duration in Seconds,Rows Count
+a_drop_views.py,2021-12-15 17:58:36.785893,Pass,Successful Run,2021-12-15 17:58:40.125880,3.339987,0
+d_agency.py,2021-12-15 17:58:40.126881,Pass,Successful Run,2021-12-15 17:58:40.992873,0.865992,91
+d_customer.py,2021-12-15 17:58:36,Fail,'psycopg2.extensions.cursor' object has no attribute 'commit',2021-12-15 17:58:36,0,0
+d_naics.py,2021-12-15 17:58:45.889847,Pass,Successful Run,2021-12-15 17:58:56.050795,10.160948,1276
+d_psc.py,2021-12-15 17:58:56.050795,Pass,Successful Run,2021-12-15 17:59:08.688721,12.637926,3122
+d_region.py,2021-12-15 17:59:08.688721,Pass,Successful Run,2021-12-15 17:59:09.544715,0.855994,11
+f_advantage.py,2021-12-15 17:59:09.544715,Pass,Successful Run,2021-12-15 17:59:14.644689,5.099974,3020615
+f_budget_authority.py,2021-12-15 17:59:14.645691,Pass,Successful Run,2021-12-15 17:59:16.032689,1.386998,199550
+f_budget_outlays.py,2021-12-15 17:59:16.033691,Pass,Successful Run,2021-12-15 17:59:17.517671,1.48398,205250
+f_budget_receipts.py,2021-12-15 17:59:17.518673,Pass,Successful Run,2021-12-15 17:59:18.382666,0.863993,12600
+f_campaign.py,2021-12-15 17:59:18.383667,Pass,Successful Run,2021-12-15 17:59:32.398591,14.014924,26840365
+f_case.py,2021-12-15 17:59:32.399594,Pass,Successful Run,2021-12-15 17:59:37.700569,5.300975,2004299
+f_ebuy.py,2021-12-15 17:59:37.701570,Pass,Successful Run,2021-12-15 17:59:41.277561,3.575991,112567
+f_eloqua_emailclick.py,2021-12-15 17:59:41.277561,Pass,Successful Run,2021-12-15 17:59:45.273539,3.995978,246287
+f_eloqua_emailopen.py,2021-12-15 17:59:45.274541,Pass,Successful Run,2021-12-15 17:59:48.119521,2.84498,4718139
+f_eloqua_emailsend.py,2021-12-15 17:59:48.120522,Pass,Successful Run,2021-12-15 17:59:54.345493,6.224971,17446778
+f_eloqua_pageview.py,2021-12-15 17:59:54.346495,Pass,Successful Run,2021-12-15 18:00:00.043410,5.696915,3179815
+f_eloqua_webvisit.py,2021-12-15 18:00:00.044458,Pass,Successful Run,2021-12-15 18:00:04.824428,4.77997,1078383
+f_opportunity.py,2021-12-15 18:00:04.825430,Pass,Successful Run,2021-12-15 18:00:09.624399,4.798969,39609
+f_survey.py,2021-12-15 18:00:09.625400,Pass,Successful Run,2021-12-15 18:00:12.002393,2.376993,1283413
+s_fpds_obligations.py,2021-12-15 18:00:12.003394,Pass,Successful Run,2021-12-15 18:00:37.560252,25.556858,7029885
+v_agency.py,2021-12-15 17:58:36,Fail,"column ""open_date_key"" does not exist in f_ebuy
+",2021-12-15 17:58:36,0,0
+v_customer.py,2021-12-15 17:58:36,Fail,"column ""open_date_key"" does not exist in f_ebuy
+",2021-12-15 17:58:36,0,0

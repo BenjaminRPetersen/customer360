@@ -1,0 +1,79 @@
+BI Procedure,Start Date Time,Status,Description,End Date Time,Duration in Seconds,Rows Count
+a_drop_views.py,2021-12-15 17:30:07.753105,Pass,Successful Run,2021-12-15 17:30:08.006105,0.253,0
+d_agency.py,2021-12-15 17:30:07,Fail,"cannot drop table customer360.d_agency because other objects depend on it
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+CONTEXT:  SQL statement ""DROP TABLE IF EXISTS customer360.d_agency""
+PL/pgSQL function ""d_agency"" line 11 at SQL statement
+",2021-12-15 17:30:07,0,0
+d_customer.py,2021-12-15 17:30:07,Fail,"cannot drop table customer360.d_customer because other objects depend on it
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+CONTEXT:  SQL statement ""DROP TABLE IF EXISTS customer360.d_customer""
+PL/pgSQL function ""d_customer"" line 13 at SQL statement
+",2021-12-15 17:30:07,0,0
+d_naics.py,2021-12-15 17:30:08.055106,Pass,Successful Run,2021-12-15 17:30:17.598992,9.543886,1276
+d_psc.py,2021-12-15 17:30:17.600993,Pass,Successful Run,2021-12-15 17:30:29.412863,11.81187,3122
+d_region.py,2021-12-15 17:30:29.414900,Pass,Successful Run,2021-12-15 17:30:29.505863,0.090963,11
+f_advantage.py,2021-12-15 17:30:07,Fail,"cannot drop table customer360.f_advantage because other objects depend on it
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+CONTEXT:  SQL statement ""DROP TABLE IF EXISTS customer360.f_advantage""
+PL/pgSQL function ""f_advantage"" line 12 at SQL statement
+",2021-12-15 17:30:07,0,0
+f_budget_authority.py,2021-12-15 17:30:29.523867,Pass,Successful Run,2021-12-15 17:30:30.345854,0.821987,199550
+f_budget_outlays.py,2021-12-15 17:30:30.347853,Pass,Successful Run,2021-12-15 17:30:31.243842,0.895989,205250
+f_budget_receipts.py,2021-12-15 17:30:31.244842,Pass,Successful Run,2021-12-15 17:30:31.450840,0.205998,12600
+f_campaign.py,2021-12-15 17:30:07,Fail,"cannot drop table customer360.f_campaign because other objects depend on it
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+CONTEXT:  SQL statement ""DROP TABLE IF EXISTS customer360.f_campaign""
+PL/pgSQL function ""f_campaign"" line 13 at SQL statement
+",2021-12-15 17:30:07,0,0
+f_case.py,2021-12-15 17:30:07,Fail,"cannot drop table customer360.f_case because other objects depend on it
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+CONTEXT:  SQL statement ""DROP TABLE IF EXISTS customer360.f_case""
+PL/pgSQL function ""f_case"" line 13 at SQL statement
+",2021-12-15 17:30:07,0,0
+f_ebuy.py,2021-12-15 17:30:07,Fail,"cannot drop table customer360.f_ebuy because other objects depend on it
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+CONTEXT:  SQL statement ""DROP TABLE IF EXISTS customer360.f_ebuy""
+PL/pgSQL function ""f_ebuy"" line 12 at SQL statement
+",2021-12-15 17:30:07,0,0
+f_eloqua_emailclick.py,2021-12-15 17:30:07,Fail,"cannot drop table customer360.f_eloqua_emailclick because other objects depend on it
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+CONTEXT:  SQL statement ""DROP TABLE IF EXISTS customer360.f_eloqua_emailclick""
+PL/pgSQL function ""f_eloqua_emailclick"" line 12 at SQL statement
+",2021-12-15 17:30:07,0,0
+f_eloqua_emailopen.py,2021-12-15 17:30:07,Fail,"cannot drop table customer360.f_eloqua_emailopen because other objects depend on it
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+CONTEXT:  SQL statement ""DROP TABLE IF EXISTS customer360.f_eloqua_emailopen""
+PL/pgSQL function ""f_eloqua_emailopen"" line 12 at SQL statement
+",2021-12-15 17:30:07,0,0
+f_eloqua_emailsend.py,2021-12-15 17:30:07,Fail,"cannot drop table customer360.f_eloqua_emailsend because other objects depend on it
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+CONTEXT:  SQL statement ""DROP TABLE IF EXISTS customer360.f_eloqua_emailsend""
+PL/pgSQL function ""f_eloqua_emailsend"" line 12 at SQL statement
+",2021-12-15 17:30:07,0,0
+f_eloqua_pageview.py,2021-12-15 17:30:07,Fail,"column name ""region"" is duplicated
+CONTEXT:  SQL statement ""SELECT  id AS pageview_key, url AS url, referrerurl AS referrer_url, customer.customer_key, customer.agency_key::integer, customer.region::integer, customer.region::integer, DATE_PART(epoch, CAST(activitydate AS DATE)) :: INTEGER AS activity_date_key INTO  customer360.f_eloqua_pageview FROM customer360.s_eloqua_pageview web_visit join customer360.s_eloqua_contacts contacts ON RIGHT(contacts.contactidext, 12) :: INTEGER = web_visit.contactid join customer360.d_customer customer ON contacts.c_emailaddress = customer.customer_key""
+PL/pgSQL function ""f_eloqua_pageview"" line 13 at SQL statement
+",2021-12-15 17:30:07,0,0
+f_eloqua_webvisit.py,2021-12-15 17:30:07,Fail,"cannot drop table customer360.f_eloqua_webvisit because other objects depend on it
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+CONTEXT:  SQL statement ""DROP TABLE IF EXISTS customer360.f_eloqua_webvisit""
+PL/pgSQL function ""f_eloqua_webvisit"" line 12 at SQL statement
+",2021-12-15 17:30:07,0,0
+f_opportunity.py,2021-12-15 17:30:07,Fail,"cannot drop table customer360.f_opportunity because other objects depend on it
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+CONTEXT:  SQL statement ""DROP TABLE IF EXISTS customer360.f_opportunity""
+PL/pgSQL function ""f_opportunity"" line 12 at SQL statement
+",2021-12-15 17:30:07,0,0
+f_survey.py,2021-12-15 17:30:07,Fail,"cannot drop table customer360.f_survey because other objects depend on it
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+CONTEXT:  SQL statement ""DROP TABLE IF EXISTS customer360.f_survey""
+PL/pgSQL function ""f_survey"" line 12 at SQL statement
+",2021-12-15 17:30:07,0,0
+s_fpds_obligations.py,2021-12-15 17:30:31.728845,Pass,Successful Run,2021-12-15 17:30:56.501568,24.772723,7029885
+v_agency.py,2021-12-15 17:30:07,Fail,"(psycopg2.errors.UndefinedTable) relation ""customer360.v_agency"" does not exist
+
+[SQL: select count(*) ct from customer360.v_agency]
+(Background on this error at: http://sqlalche.me/e/f405)",2021-12-15 17:30:07,0,0
+v_customer.py,2021-12-15 17:30:07,Fail,"relation ""v_customer"" already exists
+",2021-12-15 17:30:07,0,0

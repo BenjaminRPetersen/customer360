@@ -1,0 +1,32 @@
+Integration File,Start Date Time,Status,Description,End Date Time,Duration in Seconds,Rows Updated,Rows Created
+eloqua_accounts.py,2021-12-27 17:23:18.096238,Pass,Successful Run,2021-12-27 17:23:25.143065,7.046827,565,0
+eloqua_bounceback.py,2021-12-27 17:23:15,Fail,"(psycopg2.errors.DuplicateTable) relation ""t_eloqua_bounceback"" already exists
+
+[SQL: CREATE TABLE customer360.t_eloqua_bounceback AS (SELECT * FROM customer360.s_eloqua_bounceback WHERE 1=2);]
+(Background on this error at: http://sqlalche.me/e/f405)",2021-12-27 17:23:15,0,0,0
+eloqua_contacts.py,2021-12-27 17:23:15,Fail,"(psycopg2.errors.DuplicateTable) relation ""t_eloqua_contacts"" already exists
+
+[SQL: CREATE TABLE customer360.t_eloqua_contacts AS (SELECT * FROM customer360.s_eloqua_contacts WHERE 1=2);]
+(Background on this error at: http://sqlalche.me/e/f405)",2021-12-27 17:23:15,0,0,0
+eloqua_emailclickthrough.py,2021-12-27 17:23:32.643018,Pass,Successful Run,2021-12-27 17:23:38.752359,6.109341,679,5
+eloqua_emailopen.py,2021-12-27 17:23:39.533594,Pass,Successful Run,2021-12-27 17:24:10.611500,31.077906,20712,61
+eloqua_emailsend.py,2021-12-27 17:24:11.423989,Pass,Successful Run,2021-12-27 17:25:02.345496,50.921507,45919,495
+eloqua_formsubmit.py,2021-12-27 17:25:03.064238,Pass,Successful Run,2021-12-27 17:25:15.626655,12.562417,993,3
+eloqua_pageview.py,2021-12-27 17:23:15,Fail,"(psycopg2.errors.DuplicateTable) relation ""t_eloqua_pageview"" already exists
+
+[SQL: CREATE TABLE customer360.t_eloqua_pageview AS (SELECT * FROM customer360.s_eloqua_pageview WHERE 1=2);]
+(Background on this error at: http://sqlalche.me/e/f405)",2021-12-27 17:23:15,0,0,0
+eloqua_subscribe.py,2021-12-27 17:25:21.330093,Pass,Successful Run,2021-12-27 17:25:28.001919,6.671826,815,1
+eloqua_unsubscribe.py,2021-12-27 17:25:28.908173,Pass,Successful Run,2021-12-27 17:25:33.533134,4.624961,815,1
+eloqua_webvisit.py,2021-12-27 17:25:34.329999,Pass,Successful Run,2021-12-27 17:26:44.016675,69.686676,2945,12
+salesforce_account.py,2021-12-27 17:26:44.891724,Pass,Successful Run,2021-12-27 17:26:49.907293,5.015569,561,0
+salesforce_campaign.py,2021-12-27 17:26:50.782280,Pass,Successful Run,2021-12-27 17:26:54.907237,4.124957,94,0
+salesforce_campaignmember.py,2021-12-27 17:26:55.766601,Pass,Successful Run,2021-12-27 17:27:02.547770,6.781169,1141,2
+salesforce_case.py,2021-12-27 17:27:03.266508,Pass,Successful Run,2021-12-27 17:27:17.266350,13.999842,6774,6
+salesforce_contact.py,2021-12-27 17:27:18.125715,Pass,Successful Run,2021-12-27 17:27:39.016106,20.890391,8193,1
+salesforce_event.py,2021-12-27 17:27:39.875483,Pass,Successful Run,2021-12-27 17:27:44.406679,4.531196,110,0
+salesforce_lead.py,2021-12-27 17:27:45.234790,Pass,Successful Run,2021-12-27 17:27:50.187859,4.953069,1191,0
+salesforce_opportunity.py,2021-12-27 17:27:50.937863,Pass,Successful Run,2021-12-27 17:27:56.062789,5.124926,319,0
+salesforce_recordtype.py,2021-12-27 17:27:56.859671,Pass,Successful Run,2021-12-27 17:28:00.594001,3.73433,118,0
+salesforce_task.py,2021-12-27 17:28:01.500237,Pass,Successful Run,2021-12-27 17:28:10.953265,9.453028,5843,35
+salesforce_user.py,2021-12-27 17:28:11.812626,Pass,Successful Run,2021-12-27 17:28:10.953265,9.453028,5843,35

@@ -1,0 +1,23 @@
+Integration File,Start Date Time,Status,Description,End Date Time,Duration in Seconds,Rows Updated,Rows Created
+eloqua_accounts.py,2021-11-01 12:42:33.490924,Pass,Successful Run,2021-11-01 12:42:39.410752,5.919828,0,6
+eloqua_bounceback.py,2021-11-01 12:42:32,Fail,'items',2021-11-01 12:42:32,0,0,0
+eloqua_contacts.py,2021-11-01 12:42:40.880742,Pass,Successful Run,2021-11-01 12:43:23.524502,42.64376,36841,93
+eloqua_emailclickthrough.py,2021-11-01 12:43:23.539503,Pass,Successful Run,2021-11-01 12:43:28.519360,4.979857,0,83
+eloqua_emailopen.py,2021-11-01 12:43:28.533363,Pass,Successful Run,2021-11-01 12:43:44.464906,15.931543,0,6040
+eloqua_emailsend.py,2021-11-01 12:43:44.485913,Pass,Successful Run,2021-11-01 12:44:02.945398,18.459485,0,12751
+eloqua_formsubmit.py,2021-11-01 12:44:02.958399,Pass,Successful Run,2021-11-01 12:44:12.408107,9.449708,0,108
+eloqua_pageview.py,2021-11-01 12:44:12.420109,Pass,Successful Run,2021-11-01 12:44:21.240828,8.820719,0,1211
+eloqua_subscribe.py,2021-11-01 12:44:21.253848,Pass,Successful Run,2021-11-01 12:44:27.097665,5.843817,0,78
+eloqua_unsubscribe.py,2021-11-01 12:44:27.108719,Pass,Successful Run,2021-11-01 12:44:31.618571,4.509852,0,78
+eloqua_webvisit.py,2021-11-01 12:44:31.632571,Pass,Successful Run,2021-11-01 12:44:38.688370,7.055799,0,440
+salesforce_account.py,2021-11-01 12:44:39.056381,Pass,Successful Run,2021-11-01 12:44:44.731191,5.67481,122,29
+salesforce_campaign.py,2021-11-01 12:44:44.742203,Pass,Successful Run,2021-11-01 12:44:50.302024,5.559821,572,29
+salesforce_campaignmember.py,2021-11-01 12:44:50.319026,Pass,Successful Run,2021-11-01 12:45:00.078778,9.759752,671,1937
+salesforce_case.py,2021-11-01 12:45:00.081782,Pass,Successful Run,2021-11-01 12:45:17.059293,16.977511,7276,1205
+salesforce_contact.py,2021-11-01 12:45:17.071296,Pass,Successful Run,2021-11-01 13:07:57.350599,1360.279303,631801,335
+salesforce_event.py,2021-11-01 12:42:32,Fail,"('Connection aborted.', OSError(""(10060, 'WSAETIMEDOUT')""))",2021-11-01 12:42:32,0,0,0
+salesforce_lead.py,2021-11-01 13:08:16.567871,Pass,Successful Run,2021-11-01 13:12:03.557577,226.989706,155701,335
+salesforce_opportunity.py,2021-11-01 13:12:04.226586,Pass,Successful Run,2021-11-01 13:12:13.965273,9.738687,595,200
+salesforce_recordtype.py,2021-11-01 13:12:14.003302,Pass,Successful Run,2021-11-01 13:12:18.743146,4.739844,116,0
+salesforce_task.py,2021-11-01 13:12:18.760148,Pass,Successful Run,2021-11-01 13:12:45.889365,27.129217,6667,6720
+salesforce_user.py,2021-11-01 13:12:45.910388,Pass,Successful Run,2021-11-01 13:16:05.621655,199.711267,127513,94
