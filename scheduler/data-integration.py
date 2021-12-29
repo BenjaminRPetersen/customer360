@@ -8,7 +8,7 @@ Created on Fri Sep 10 11:07:07 2021
 """
 
 "Import Base Packages"
-import os, csv, requests
+import os, csv, requests, pandas as pd
 from datetime import datetime, date # Used for logging
 from os import listdir
 from os.path import isfile, join
@@ -60,47 +60,31 @@ while file_index < len(integration_files):
         created = 0
     log = [integration_files[file_index], start, stat, fail, end, difference, updated, created]
     log_rows.append(log)
-    if stat == 'Pass':
-        webhook_url = 'https://chat.googleapis.com/v1/spaces/AAAAwmb61yg/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=ekf8x0DkOvVy9VSfXmzZ3zSrDDcyyE6ux358wh7gCC8%3D'
-        webhook_json = '''{
-                              "cards": [
-                                {
-                                  "sections": [
-                                    {
-                                      "widgets": [
-                                        {
-                                          "textParagraph": {
-                                            "text": "Table: <b>'''+integration_files[file_index].replace('.py','')+'''</b> <br>Date: '''+str(date.today())+'''<br>Status: Pass <br>Rows Created: '''+str(created)+'''<br>Rows Updated: '''+str(updated)+'''"
-                                          }
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }'''
-        requests.post(webhook_url, webhook_json)
-    elif stat == 'Fail':
-        webhook_url = 'https://chat.googleapis.com/v1/spaces/AAAAwmb61yg/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=ekf8x0DkOvVy9VSfXmzZ3zSrDDcyyE6ux358wh7gCC8%3D'
-        webhook_json = '''{
-                              "cards": [
-                                {
-                                  "sections": [
-                                    {
-                                      "widgets": [
-                                        {
-                                          "textParagraph": {
-                                            "text": "Table: <b>'''+integration_files[file_index].replace('.py','')+'''</b> <br>Date: '''+str(date.today())+'''<br>Status: Failed <br>Error Message: '''+str(fail)+'''"
-                                          }
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }'''
-        requests.post(webhook_url, webhook_json)
     file_index = file_index+1
+
+loger = pd.DataFrame(log_rows)
+loger.columns = log_header
+
+webhook_url = 'https://chat.googleapis.com/v1/spaces/AAAAwmb61yg/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=ekf8x0DkOvVy9VSfXmzZ3zSrDDcyyE6ux358wh7gCC8%3D'
+webhook_json = '''{
+                              "cards": [
+                                {
+                                  "sections": [
+                                    {
+                                      "widgets": [
+                                        {
+                                          "textParagraph": {
+                                            "text": "Date: '''+str(date.today())+'''<br><b>Salesforce Integration</b> <br><i>Success</i>: '''+str(len(loger[(loger.Status == 'Pass') & (loger['Integration File'].str.contains('salesforce'))]))+''' <br><i>Fail</i>: '''+str(len(loger[(loger.Status == 'Fail') & (loger['Integration File'].str.contains('salesforce'))]))+''' <br><b>Eloqua Integration</b> <br><i>Success</i>: '''+str(len(loger[(loger.Status == 'Pass') & (loger['Integration File'].str.contains('eloqua'))]))+''' <br><i>Fail</i>: '''+str(len(loger[(loger.Status == 'Fail') & (loger['Integration File'].str.contains('eloqua'))]))+'''"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }'''
+requests.post(webhook_url, webhook_json)
+
 "Log Results of Run"
 os.chdir('C:/customer360/logging/')
 with open(filename, 'w') as csvfile:
