@@ -21,7 +21,7 @@ start = datetime.datetime.now()
 Update data in Redshift
 """
 cur = conn.raw_connection().cursor()
-cur.execute("""create view customer360.v_region as 
+cur.execute("""create or replace view customer360.v_region as 
             select 	a.region::varchar,
 		a.region_name,
 		a.tax_returns_filed::varchar,
@@ -100,12 +100,12 @@ from 	(customer360.d_region
 					group by region,created_date_key+31536000) opp_ly
 			on a.region = opp_ly.region
 			and a.date_key = opp_ly.created_date_key
-		left join (select region, created_date_key, sum(clp_credits_earned) as clp_credits_earned, count(distinct campaignmember_key) as campaign_members
+		left join (select region, created_date_key, sum(total_clp_credits) as clp_credits_earned, sum(campaign_leads + campaign_contacts) as campaign_members
 				 from customer360.f_campaign
 				 group by region, created_date_key)camp
 			on a.region = camp.region
 			and a.date_key = camp.created_date_key
-		left join (select region, created_date_key+31536000 as created_date_key, sum(clp_credits_earned) as clp_credits_earned, count(distinct campaignmember_key) as campaign_members
+		left join (select region, created_date_key+31536000 as created_date_key, sum(total_clp_credits) as clp_credits_earned, sum(campaign_leads + campaign_contacts) as campaign_members
 				 from customer360.f_campaign
 				 group by region, created_date_key+31536000)camp_ly
 			on a.region = camp_ly.region

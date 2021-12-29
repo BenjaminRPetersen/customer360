@@ -21,7 +21,7 @@ start = datetime.datetime.now()
 Update data in Redshift
 """
 cur = conn.raw_connection().cursor()
-cur.execute("""create or replace No dview customer360.v_agency as 
+cur.execute("""create or replace view customer360.v_agency as 
             select 	a.agency_name,
 		a.full_date::date,
 		coalesce(sum(adv.extended_price),0)::bigint as total_advantage_spend,
@@ -97,12 +97,12 @@ from 	(customer360.d_agency
 			on a.agency_key = opp_ly.agency_key
 			and a.date_key = opp_ly.created_date_key
 		left join (select agency_key, created_date_key, sum(clp_credits_earned) as clp_credits_earned, count(distinct campaignmember_key) as campaign_members
-				 from customer360.f_campaign
+				 from customer360.f_campaign_member
 				 group by agency_key, created_date_key)camp
 			on a.agency_key = camp.agency_key
 			and a.date_key = camp.created_date_key
 		left join (select agency_key, created_date_key+31536000 as created_date_key, sum(clp_credits_earned) as clp_credits_earned, count(distinct campaignmember_key) as campaign_members
-				 from customer360.f_campaign
+				 from customer360.f_campaign_member
 				 group by agency_key, created_date_key+31536000)camp_ly
 			on a.agency_key = camp_ly.agency_key
 			and a.date_key = camp_ly.created_date_key

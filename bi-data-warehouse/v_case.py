@@ -90,11 +90,11 @@ from		(select * from customer360.d_date where full_date between current_date-365
 					from customer360.f_opportunity 
 					group by closed_date_key+31536000) opp_ly
 			on core.date_key = opp_ly.closed_date_key
-		left join (select created_date_key, sum(clp_credits_earned) as clp_credits_earned, count(distinct campaignmember_key) as campaign_members
+		left join (select created_date_key, sum(total_clp_credits) as clp_credits_earned, sum(campaign_leads + campaign_contacts) as campaign_members
 				 from customer360.f_campaign
 				 group by created_date_key)camp
 			on core.date_key = camp.created_date_key
-		left join (select created_date_key+31536000 as created_date_key, count(distinct campaign_key) as campaigns, sum(clp_credits_earned) as clp_credits_earned, count(distinct campaignmember_key) as campaign_members
+		left join (select created_date_key+31536000 as created_date_key, sum(total_clp_credits) as clp_credits_earned, sum(campaign_leads + campaign_contacts) as campaign_members
 				 from customer360.f_campaign
 				 group by created_date_key+31536000)camp_ly
 			on core.date_key = camp_ly.created_date_key

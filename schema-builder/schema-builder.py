@@ -8,8 +8,8 @@ Created on Tue Oct 19 13:36:00 2021
 """
 
 "Import Base Packages"
-import os, csv
-from datetime import datetime # Used for logging
+import os, csv, pandas as pd, requests
+from datetime import datetime, date # Used for logging
 from os import listdir
 from os.path import isfile, join
 
@@ -52,6 +52,30 @@ while file_index < len(integration_files):
     log = [integration_files[file_index], start, stat, fail, end, difference, rows]
     log_rows.append(log)
     file_index = file_index+1
+
+loger = pd.DataFrame(log_rows)
+loger.columns = log_header
+
+
+webhook_url = 'https://chat.googleapis.com/v1/spaces/AAAAwmb61yg/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=qOyxUkesYsDcc6bYOXbPvYem-e8kpbQN_wgsJlC4500%3D'
+webhook_json = '''{
+                              "cards": [
+                                {
+                                  "sections": [
+                                    {
+                                      "widgets": [
+                                        {
+                                          "textParagraph": {
+                                            "text": "Date: '''+str(date.today())+'''<br><b>Intelligence Layer</b> <br><i>Success</i>: '''+str(len(loger[loger.Status == 'Pass']))+''' <br><i>Fail</i>: '''+str(len(loger[loger.Status == 'Fail']))+'''"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }'''
+requests.post(webhook_url, webhook_json)
 
 "Log Results of Run"
 os.chdir('C:/customer360/logging/')

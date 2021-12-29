@@ -21,7 +21,7 @@ start = datetime.datetime.now()
 Update data in Redshift
 """
 cur = conn.raw_connection().cursor()
-cur.execute("""create view customer360.v_customer as
+cur.execute("""create or replace view customer360.v_customer as
 select 	agency.agency_name
         , core.customer_key
 		, core.zip_code
@@ -83,10 +83,10 @@ from		(select u.*, d.full_date, c.zip_code, c.region, c.region_name, c.email_dom
 		  from customer360.f_opportunity
 		  union
 		  select distinct customer_key, created_date_key as date_key
-		  from customer360.f_campaign
+		  from customer360.f_campaign_member
 		  union
 		  select distinct customer_key, created_date_key+31536000 as date_key
-		  from customer360.f_campaign
+		  from customer360.f_campaign_member
 		  union
 		  select 	distinct customer_key, activity_date_key as date_key
 		  from		customer360.f_eloqua_webvisit
@@ -167,12 +167,12 @@ from		(select u.*, d.full_date, c.zip_code, c.region, c.region_name, c.email_dom
 			on core.customer_key = opp_ly.customer_key
 			and core.date_key = opp_ly.closed_date_key
 		left join (select customer_key, created_date_key, sum(clp_credits_earned) as clp_credits_earned, count(distinct campaignmember_key) as campaign_members
-				 from customer360.f_campaign
+				 from customer360.f_campaign_member
 				 group by customer_key, created_date_key)camp
 			on core.customer_key = camp.customer_key
 			and core.date_key = camp.created_date_key
 		left join (select customer_key, created_date_key+31536000 as created_date_key, count(distinct campaign_key) as campaigns, sum(clp_credits_earned) as clp_credits_earned, count(distinct campaignmember_key) as campaign_members
-				 from customer360.f_campaign
+				 from customer360.f_campaign_member
 				 group by customer_key, created_date_key+31536000)camp_ly
 			on core.customer_key = camp_ly.customer_key
 			and core.date_key = camp_ly.created_date_key
