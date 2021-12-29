@@ -69,6 +69,7 @@ df.rename(columns={'Address.postalCode':'ZipCode'}, inplace=True)
 
 """
 Update data in Redshift
+"""
 conn.execute("CREATE TABLE customer360.t_salesforce_user AS (SELECT * FROM customer360.s_salesforce_user WHERE 1=2);")
 df.to_sql('t_salesforce_user', conn, schema='customer360', index=False, if_exists='append',chunksize=10000, method='multi')
 col = df.columns.str.lower()
@@ -91,4 +92,4 @@ conn.execute("drop table customer360.t_salesforce_user; commit;")
 # conn.execute("GRANT SELECT ON ALL TABLES IN SCHEMA customer360 TO gabegoralski, rosemarythan, kiyounglee, bryanthales, ernestdakin, shilpakhanna, davidtreichler, raquelsumaray")
 end = datetime.datetime.now()
 difference = (end-start)
-difference = difference.total_seconds()"""
+difference = difference.total_seconds()
