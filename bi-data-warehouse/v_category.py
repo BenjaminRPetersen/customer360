@@ -145,7 +145,7 @@ from 	(customer360.d_category
     group by a.category_key,
     		a.category_description,
 		a.full_date::date; commit;""")
-rows = conn.execute("select count(*) ct from customer360.v_region").fetchall()[0][0]
+rows = conn.execute("select count(*) ct from customer360.v_category").fetchall()[0][0]
 end = datetime.datetime.now()
 difference = (end-start)
 difference = difference.total_seconds()
